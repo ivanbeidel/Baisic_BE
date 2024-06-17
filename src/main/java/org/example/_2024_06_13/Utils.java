@@ -4,6 +4,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Utils {
+    private static Scanner scanner = new Scanner(System.in);
     public static int[] getLuckyNumbers() {
         int[] luckyNumbers = new int[Constant.COUNT_SET_SIZE];
         Random random = new Random();
@@ -20,7 +21,6 @@ public class Utils {
     }
 
     public static int[] getUserNumbers() {
-        Scanner scanner = new Scanner(System.in);
         int[] humanNums = new int[Constant.COUNT_SET_SIZE];
         System.out.println("Введите 5 чисел от 1 до 50");
         int i = 1;
@@ -69,4 +69,9 @@ public class Utils {
 //        }
 //        return matchingNum;
 //    }
+    public static int getCountUsers(){
+        System.out.println("Введите количество игроков: ");
+        int countUsers = scanner.nextInt();
+        return countUsers;
+    }
 }
