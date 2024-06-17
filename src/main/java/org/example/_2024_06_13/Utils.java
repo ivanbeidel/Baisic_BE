@@ -46,7 +46,7 @@ public class Utils {
         return false;
     }
 
-    public static int[] compOfNumbers(int[] luckyNumbers, int[] humanNumbers) {
+        public static int compOfNumbers(int[] luckyNumbers, int[] humanNumbers) {
         int matchingNum = 0;
         for (int humNum : humanNumbers) {
             for (int luckNum : luckyNumbers) {
@@ -56,6 +56,17 @@ public class Utils {
                 }
             }
         }
-        return new int[]{matchingNum};
+        return matchingNum;
     }
+//    public static int compOfNumbers(int[] luckyNumbers, int[] humanNumbers) {
+//        int matchingNum = 0;
+//        Arrays.sort(luckyNumbers);
+//        Arrays.sort(humanNumbers);
+//        for (int i = 0; i < Constant.COUNT_SET_SIZE; i++) {
+//            if (luckyNumbers[i] == humanNumbers[i]) {
+//                matchingNum++;
+//            }
+//        }
+//        return matchingNum;
+//    }
 }
