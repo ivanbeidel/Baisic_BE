@@ -70,8 +70,12 @@ public class Utils {
 //        return matchingNum;
 //    }
     public static int getCountUsers(){
-        System.out.println("Введите количество игроков: ");
-        int countUsers = scanner.nextInt();
+        int countUsers = 1;
+        do {
+            System.out.println("Введите количество игроков от 1 до 7: ");
+            countUsers = scanner.nextInt();
+        }
+        while (countUsers < 1 || countUsers > 7);
         return countUsers;
     }
 }
