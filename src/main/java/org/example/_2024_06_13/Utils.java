@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 public class Utils {
     private static Scanner scanner = new Scanner(System.in);
+
     public static int[] getLuckyNumbers() {
         int[] luckyNumbers = new int[Constant.COUNT_SET_SIZE];
         Random random = new Random();
@@ -46,7 +47,7 @@ public class Utils {
         return false;
     }
 
-        public static int compOfNumbers(int[] luckyNumbers, int[] humanNumbers) {
+    public static int compOfNumbers(int[] luckyNumbers, int[] humanNumbers) {
         int matchingNum = 0;
         for (int humNum : humanNumbers) {
             for (int luckNum : luckyNumbers) {
@@ -58,7 +59,8 @@ public class Utils {
         }
         return matchingNum;
     }
-//    public static int compOfNumbers(int[] luckyNumbers, int[] humanNumbers) {
+
+    //    public static int compOfNumbers(int[] luckyNumbers, int[] humanNumbers) {
 //        int matchingNum = 0;
 //        Arrays.sort(luckyNumbers);
 //        Arrays.sort(humanNumbers);
@@ -69,7 +71,7 @@ public class Utils {
 //        }
 //        return matchingNum;
 //    }
-    public static int getCountUsers(){
+    public static int getCountUsers() {
         int countUsers = 1;
         do {
             System.out.println("Введите количество игроков от 1 до 7: ");
